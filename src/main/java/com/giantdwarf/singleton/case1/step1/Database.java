@@ -4,8 +4,8 @@ public class Database {
     private static Database singleton;
     private String name;
 
-    public static Database getInstance(String name){
-        if(singleton == null){
+    public static Database getInstance(String name) {
+        if (singleton == null) {
             singleton = new Database(name);
         }
 
@@ -16,8 +16,15 @@ public class Database {
         return name;
     }
 
-    public Database(String name) {
-        super();
-        this.name = name;
+    private Database(String name) {
+//        super();
+//        this.name = name;
+
+        try {
+            Thread.sleep(100);
+            this.name = name;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

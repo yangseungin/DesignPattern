@@ -10,7 +10,8 @@ public class TestPattern1 {
         database = Database.getInstance("두 번째 Database");
         System.out.println("This is the "+database.getName()+" !");
 
-        System.out.println("database use");
+
+
 
     }
 
